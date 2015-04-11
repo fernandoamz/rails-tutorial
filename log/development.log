@@ -15431,3 +15431,1348 @@ Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127
 
 
 Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-10 22:29:12 -0500
+
+
+Started GET "/articles/" for 127.0.0.1 at 2015-04-10 23:42:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (37.3ms)
+  Rendered partials/_navigation.html.erb (14.0ms)
+Completed 200 OK in 722ms (Views: 626.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:29 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-10 23:42:33 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (2.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["visits_count", 37], ["updated_at", "2015-04-11 04:42:33.425639"], ["id", 14]]
+  [1m[36m (130.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (128.5ms)
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (307.6ms)
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 1023ms (Views: 478.2ms | ActiveRecord: 140.8ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-10 23:42:34 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:08:51 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (1.7ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["visits_count", 38], ["updated_at", "2015-04-11 05:08:52.153468"], ["id", 14]]
+  [1m[36m (108.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (9.3ms)
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (102.0ms)
+  Rendered partials/_navigation.html.erb (1.7ms)
+Completed 200 OK in 608ms (Views: 347.1ms | ActiveRecord: 123.9ms)
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:52 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:08:53 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:08:58 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:09:49 -0500
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"comentario de prueba AJAX"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+Completed 401 Unauthorized in 48ms
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:10:05 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 39], ["updated_at", "2015-04-11 05:10:05.676182"], ["id", 14]]
+  [1m[35m (164.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.3ms)
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (46.4ms)
+  Rendered partials/_navigation.html.erb (2.6ms)
+Completed 200 OK in 516ms (Views: 323.7ms | ActiveRecord: 169.0ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:06 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:10:14 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 40], ["updated_at", "2015-04-11 05:10:14.519296"], ["id", 14]]
+  [1m[35m (108.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.5ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (72.3ms)
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 456ms (Views: 312.7ms | ActiveRecord: 113.3ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:15 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 41], ["updated_at", "2015-04-11 05:10:33.137354"], ["id", 14]]
+  [1m[35m (137.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.0ms)
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (38.3ms)
+  Rendered partials/_navigation.html.erb (1.4ms)
+Completed 200 OK in 421ms (Views: 253.7ms | ActiveRecord: 142.1ms)
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:33 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:10:44 -0500
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"comentario con ajax. ya te la sabes !"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+Completed 401 Unauthorized in 4ms
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:10:45 -0500
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"comentario con ajax. ya te la sabes !"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:10:47 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (1.3ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 42], ["updated_at", "2015-04-11 05:10:47.976401"], ["id", 14]]
+  [1m[35m (179.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.0ms)
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (34.8ms)
+  Rendered partials/_navigation.html.erb (1.5ms)
+Completed 200 OK in 418ms (Views: 206.6ms | ActiveRecord: 184.3ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:10:48 -0500
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" ASC LIMIT 1[0m
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:12:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 43], ["updated_at", "2015-04-11 05:12:23.681874"], ["id", 14]]
+  [1m[35m (319.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (147.4ms)
+  [1m[35mComment Load (0.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (324.0ms)
+  Rendered partials/_navigation.html.erb (15.0ms)
+Completed 200 OK in 1401ms (Views: 861.4ms | ActiveRecord: 327.5ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:25 -0500
+
+
+Started GET "/articles/14/edit" for 127.0.0.1 at 2015-04-11 00:12:30 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+Completed 401 Unauthorized in 18ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-04-11 00:12:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (38.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (129.1ms)
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 335ms (Views: 321.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-11 00:12:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IuPXpKFwbVTwtFp2QE53BkSF2agBMzxD7XkWXHBTb2chcV7jC9NM++aZ2QViyHcA38ho6jH7ouhY03xw3ddCQg==", "user"=>{"email"=>"fernandoamz148@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fernandoamz148@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-04-07 05:28:26.260737"], ["current_sign_in_at", "2015-04-11 05:12:39.547506"], ["sign_in_count", 3], ["updated_at", "2015-04-11 05:12:39.553134"], ["id", 4]]
+  [1m[36m (98.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/14/edit
+Completed 302 Found in 364ms (ActiveRecord: 101.5ms)
+
+
+Started GET "/articles/14/edit" for 127.0.0.1 at 2015-04-11 00:12:39 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered articles/_form.html.erb (5.9ms)
+  Rendered articles/edit.html.erb within layouts/application (9.9ms)
+  Rendered partials/_navigation.html.erb (1.0ms)
+Completed 200 OK in 219ms (Views: 210.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:40 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:12:47 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 44], ["updated_at", "2015-04-11 05:12:47.800201"], ["id", 14]]
+  [1m[35m (228.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.4ms)
+  [1m[35mComment Load (1.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (72.5ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered partials/_navigation.html.erb (7.8ms)
+Completed 200 OK in 562ms (Views: 295.5ms | ActiveRecord: 233.5ms)
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:48 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:12:56 -0500
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"comentario ajax"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "comentario ajax"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:12:56.710554"], ["updated_at", "2015-04-11 05:12:56.710554"]]
+  [1m[36m (107.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/14
+Completed 302 Found in 142ms (ActiveRecord: 109.1ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2015-04-11 00:12:56 -0500
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (1.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 45], ["updated_at", "2015-04-11 05:12:56.905583"], ["id", 14]]
+  [1m[35m (252.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (6.6ms)
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (41.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (6.1ms)
+Completed 200 OK in 525ms (Views: 247.4ms | ActiveRecord: 257.5ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:12:58 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 46], ["updated_at", "2015-04-11 05:12:58.310058"], ["id", 14]]
+  [1m[35m (248.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (35.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (3.8ms)
+Completed 200 OK in 515ms (Views: 236.7ms | ActiveRecord: 253.7ms)
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:58 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:58 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:58 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:12:59 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.8ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 47], ["updated_at", "2015-04-11 05:16:12.216319"], ["id", 14]]
+  [1m[35m (168.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (6.4ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (32.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (4.5ms)
+Completed 200 OK in 415ms (Views: 227.0ms | ActiveRecord: 172.4ms)
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/comments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:12 -0500
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-11 00:16:13 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:16:17 -0500
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:23:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.6ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 48], ["updated_at", "2015-04-11 05:23:02.667895"], ["id", 14]]
+  [1m[35m (137.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (61.4ms)
+  [1m[35mComment Load (1.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (269.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (7.4ms)
+Completed 200 OK in 2249ms (Views: 1886.9ms | ActiveRecord: 148.1ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:04 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:04 -0500
+
+
+Started GET "/assets/comments-85da6f4c13d0daee55883f39cdafbfef.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:04 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:04 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/application-dcf803155825917f60c5d795a1189b6d.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:23:05 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:23:42 -0500
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"create comments"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "create comments"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:23:42.949414"], ["updated_at", "2015-04-11 05:23:42.949414"]]
+  [1m[35m (157.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/14
+Completed 302 Found in 206ms (ActiveRecord: 159.5ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2015-04-11 00:23:43 -0500
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["visits_count", 49], ["updated_at", "2015-04-11 05:23:43.164721"], ["id", 14]]
+  [1m[36m (122.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (10.1ms)
+  [1m[36mComment Load (5.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (53.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (5.7ms)
+Completed 200 OK in 416ms (Views: 269.1ms | ActiveRecord: 130.6ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:27:22 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 50], ["updated_at", "2015-04-11 05:27:22.390453"], ["id", 14]]
+  [1m[35m (161.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (4.5ms)
+  Rendered articles/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 200ms
+
+SyntaxError (/home/fernanod/project/blog/app/views/comments/_form.html.erb:1: syntax error, unexpected ':', expecting =>
+... "comments-form", :"data-type": "json"}
+...                               ^
+/home/fernanod/project/blog/app/views/comments/_form.html.erb:1: syntax error, unexpected '}', expecting keyword_end
+/home/fernanod/project/blog/app/views/comments/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/comments/_form.html.erb:1: syntax error, unexpected ':', expecting =>
+  app/views/comments/_form.html.erb:1: syntax error, unexpected '}', expecting keyword_end
+  app/views/comments/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/articles/show.html.erb:17:in `_app_views_articles_show_html_erb___270663915678200520_70039047130160'
+
+
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.1ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.2ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.8ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.7ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (125.3ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:28:50 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 51], ["updated_at", "2015-04-11 05:28:50.741003"], ["id", 14]]
+  [1m[35m (108.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (6.6ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (41.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered partials/_navigation.html.erb (4.0ms)
+Completed 200 OK in 391ms (Views: 237.3ms | ActiveRecord: 112.8ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/comments-85da6f4c13d0daee55883f39cdafbfef.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started GET "/assets/application-dcf803155825917f60c5d795a1189b6d.js?body=1" for 127.0.0.1 at 2015-04-11 00:28:51 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:29:14 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"sfgertrte"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "sfgertrte"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:29:14.107663"], ["updated_at", "2015-04-11 05:29:14.107663"]]
+  [1m[36m (111.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 164ms
+
+NoMethodError (undefined method `comment_url' for #<CommentsController:0x007f66799e5598>):
+  app/controllers/comments_controller.rb:13:in `block (2 levels) in create'
+  app/controllers/comments_controller.rb:10:in `create'
+
+
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.2ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.5ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (66.7ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/fernanod/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.0ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:30:53 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (1.3ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 52], ["updated_at", "2015-04-11 05:30:53.608068"], ["id", 14]]
+  [1m[35m (175.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.4ms)
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (92.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (5.5ms)
+Completed 200 OK in 1131ms (Views: 861.3ms | ActiveRecord: 185.2ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:54 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:54 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:54 -0500
+
+
+Started GET "/assets/comments-21fc6eeb9979b3b5da0ba4cd09ca1552.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:54 -0500
+
+
+Started GET "/assets/application-e89c194e40d9c9c3cf678ae2ec6b2735.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:54 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:30:55 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:31:03 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"adsfasdfasfsadf"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "adsfasdfasfsadf"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:31:03.469264"], ["updated_at", "2015-04-11 05:31:03.469264"]]
+  [1m[35m (245.6ms)[0m  commit transaction
+  Rendered comments/show.json.jbuilder (28.8ms)
+Completed 201 Created in 358ms (Views: 58.1ms | ActiveRecord: 247.6ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:36:12 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["visits_count", 53], ["updated_at", "2015-04-11 05:36:12.824368"], ["id", 14]]
+  [1m[36m (167.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (9.9ms)
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (87.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered partials/_navigation.html.erb (5.5ms)
+Completed 200 OK in 1095ms (Views: 885.3ms | ActiveRecord: 173.0ms)
+
+
+Started GET "/assets/application-edb1b22915d739daaea77452d88280e2.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/comments-7af07ba89c373cfaaa58d2f5fce1afc0.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:36:14 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:36:18 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"holaaa"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "holaaa"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:36:18.339632"], ["updated_at", "2015-04-11 05:36:18.339632"]]
+  [1m[35m (119.9ms)[0m  commit transaction
+  Rendered comments/show.json.jbuilder (1.3ms)
+Completed 201 Created in 158ms (Views: 10.6ms | ActiveRecord: 124.1ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:38:53 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["visits_count", 54], ["updated_at", "2015-04-11 05:38:53.042613"], ["id", 14]]
+  [1m[36m (122.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (13.0ms)
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (91.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered partials/_navigation.html.erb (5.2ms)
+Completed 200 OK in 998ms (Views: 848.3ms | ActiveRecord: 130.0ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/comments-9aca959ba5aa808281f735e06e10828b.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/application-2a0eb068db5d0c6e168ae6c2e5372a32.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:38:54 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:38:57 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"wqwwqqwq"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "wqwwqqwq"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:38:57.970463"], ["updated_at", "2015-04-11 05:38:57.970463"]]
+  [1m[36m (122.5ms)[0m  [1mcommit transaction[0m
+  Rendered comments/show.json.jbuilder (1.0ms)
+Completed 201 Created in 155ms (Views: 12.1ms | ActiveRecord: 124.2ms)
+
+
+Started GET "/articles/14/" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.5ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'fernando' AND "articles"."id" != 14) LIMIT 1
+  [1m[36mSQL (9.4ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 55], ["updated_at", "2015-04-11 05:39:36.110895"], ["id", 14]]
+  [1m[35m (129.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (6.0ms)
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (54.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered partials/_navigation.html.erb (4.1ms)
+Completed 200 OK in 561ms (Views: 397.1ms | ActiveRecord: 141.9ms)
+
+
+Started GET "/assets/comments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/flexboxgrid-0313c881a0e90de3db58856791cd8182.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/style-a8e8b8281c4125cfb9c8e9f473ea3823.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/scaffolds-ca4898181b272da386c8b6dfce7aebcb.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/application-0f3b08fc27e8841c462c95a6c0c9ac88.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:36 -0500
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 00:39:37 -0500
+
+
+Started GET "/assets/comments-9aca959ba5aa808281f735e06e10828b.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:37 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:37 -0500
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:37 -0500
+
+
+Started GET "/assets/application-2a0eb068db5d0c6e168ae6c2e5372a32.js?body=1" for 127.0.0.1 at 2015-04-11 00:39:37 -0500
+
+
+Started POST "/articles/14/comments" for 127.0.0.1 at 2015-04-11 00:39:39 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"sdasdasd"}, "commit"=>"Create Comment", "article_id"=>"14"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "comments" ("body", "user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "sdasdasd"], ["user_id", 4], ["article_id", 14], ["created_at", "2015-04-11 05:39:39.843892"], ["updated_at", "2015-04-11 05:39:39.843892"]]
+  [1m[36m (143.2ms)[0m  [1mcommit transaction[0m
+  Rendered comments/show.json.jbuilder (0.8ms)
+Completed 201 Created in 177ms (Views: 10.4ms | ActiveRecord: 146.1ms)
